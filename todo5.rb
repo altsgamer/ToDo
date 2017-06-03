@@ -6,7 +6,13 @@ todo_array = CSV.read('todolist.csv')
 if ['-n', '--new'].include?(ARGV[0])
 	if ARGV[1] != nil
 		n = todo_array.count
-		todo_array.push [n, ARGV[1], 'A']
+		i = 1
+		String.new(t="")
+		until i >= ARGV.length
+			t = t + ARGV[i] + ' ' 
+			i += 1
+		end
+		todo_array.push [n, t, 'A']
 		puts "active task number #{n} added"
 	else
 		puts 'enter the task text'
