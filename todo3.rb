@@ -1,4 +1,5 @@
-# 2. --read N, -r N: show the N'th record
+# 3. --complete N, -c N: mark the N'th record as "done".
+# If the N'th record is already "done", it should become "todo" again.
 
 require 'csv'
 todo_array = CSV.read('todolist.csv')
