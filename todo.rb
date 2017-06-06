@@ -6,9 +6,9 @@ end
 
 todo_array = CSV.read('todolist.csv')
 
-argument_command = ARGV[0]
-case argument_command
-
+# argument_command = ARGV[0]
+# case argument_command
+case ARGV[0]
 # 1. --list, -l: see the list
 	when ('-l' || '--list')
 		puts IO.read('todolist.csv')
